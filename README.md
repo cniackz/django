@@ -23,3 +23,7 @@ To activate my virtual environment:
 
 * Username: admin
 * Password: Yuyu@123
+
+# API GET QUESTIONS
+
+`curl -H 'Accept: application/json; indent=4' -u admin:Yuyu@123 http://127.0.0.1:8000/questions/`
