@@ -20,5 +20,5 @@ To activate my virtual environment:
 
 # Django Admin
 
-Username: admin
-Password: Yuyu@123
+* Username: admin
+* Password: Yuyu@123
