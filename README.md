@@ -17,3 +17,8 @@ To activate my virtual environment:
 | pytz            | 2020.4  |
 | setuptools      | 41.2.0  |
 | sqlparse        | 0.4.1   |
+
+# Django Admin
+
+Username: admin
+Password: Yuyu@123
