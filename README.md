@@ -2,6 +2,7 @@
 1. `cd /Users/ccelis/django/mysite`
 1. `source ~/django/.venv/bin/activate`
 3. `python manage.py runserver`
+4. `http://127.0.0.1:8000/`
 # PSQL
 
 To connect to my database:
