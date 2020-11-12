@@ -1,9 +1,11 @@
 # Steps to get things working
 1. `cd /Users/ccelis/django/mysite`
 1. `source ~/django/.venv/bin/activate`
-3. `python manage.py runserver`
-4. `http://127.0.0.1:8000/`
-5. `httpGet('http://127.0.0.1:8000/questions/')` (JS function defined below)
+1. `python manage.py runserver`
+1. `http://127.0.0.1:8000/`
+1. `httpGet('http://127.0.0.1:8000/questions/')`
+    * Added new web page to call JS and get questions
+    * `http://127.0.0.1:8000/quickstart/`
 # PSQL
 
 To connect to my database:
