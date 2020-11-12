@@ -1,3 +1,5 @@
+# Steps to get things working
+`cd /Users/ccelis/django/mysite`
 # PSQL
 
 To connect to my database:
