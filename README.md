@@ -1,6 +1,7 @@
 # Steps to get things working
 1. `cd /Users/ccelis/django/mysite`
 1. `source ~/django/.venv/bin/activate`
+3. `python manage.py runserver`
 # PSQL
 
 To connect to my database:
