@@ -3,6 +3,7 @@
 1. `source ~/django/.venv/bin/activate`
 3. `python manage.py runserver`
 4. `http://127.0.0.1:8000/`
+5. `httpGet('http://127.0.0.1:8000/questions/')` (JS function defined below)
 # PSQL
 
 To connect to my database:
