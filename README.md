@@ -48,8 +48,9 @@ function httpGet(theUrl)
 }
 ```
 # Django User Interface
-* `http://127.0.0.1:8000/polls/`
-* You can vote for each question
-* `http://127.0.0.1:8000/polls/2/`
+* You can select one question:
+  * `http://127.0.0.1:8000/polls/`
+* You can vote for each question:
+  * `http://127.0.0.1:8000/polls/2/`
 * You can see the results for each voted question
-* `http://127.0.0.1:8000/polls/2/results/`
+  * `http://127.0.0.1:8000/polls/2/results/`
