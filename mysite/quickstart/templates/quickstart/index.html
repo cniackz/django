@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+
+<script>
+
+function myFunction() {
+  alert("Hello! I am an alert box!");
+}
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+console.log(httpGet('http://127.0.0.1:8000/questions/'))
+document.getElementById("demo").innerHTML = httpGet('http://127.0.0.1:8000/questions/');
+
+</script>
+
+    </body>
+</html>
