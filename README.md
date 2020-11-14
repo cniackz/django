@@ -3,10 +3,9 @@
 1. `source ~/django/.venv/bin/activate`
 1. `python manage.py runserver`
 1. `http://127.0.0.1:8000/`
-1. `httpGet('http://127.0.0.1:8000/questions/')`
-    * Added new web page to call JS and get questions
-    * mysite/quickstart/templates/quickstart/index.html
-    * `http://127.0.0.1:8000/quickstart/`
+1. `http://127.0.0.1:8000/quickstart/` 
+   1. This URL contains full implementation of type: (PSQL <-> BE <-> FE)
+
 # PSQL
 
 To connect to my database:
