@@ -5,6 +5,7 @@
 1. `http://127.0.0.1:8000/`
 1. `httpGet('http://127.0.0.1:8000/questions/')`
     * Added new web page to call JS and get questions
+    * mysite/quickstart/templates/quickstart/index.html
     * `http://127.0.0.1:8000/quickstart/`
 # PSQL
 
