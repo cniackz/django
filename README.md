@@ -5,10 +5,10 @@
 1. `http://127.0.0.1:8000/`
 1. `http://127.0.0.1:8000/quickstart/` 
    * Full Stack Testing
-   * This URL contains full implementation of type: (PSQL <-> BE <-> FE)
+   * PSQL <-> BE <-> FE
 1. `http://127.0.0.1:8000/questions/`
    * BE Testing
-   * This URL contains partial implementation of type: (PSQL <-> BE <-> REST Framework) 
+   * PSQL <-> BE <-> REST Framework
 
 # PSQL
 
