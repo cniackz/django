@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <p id="demo"></p>
+        <div id="count">count: </div>
+        <ul id="results">results: </ul>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+        <script>
+            function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        /* 
+                            {
+                                "count":2,
+                                "next":null,
+                                "previous":null,
+                                "results":[
+                                    {"url":"http://127.0.0.1:8000/questions/1/","id":1,"question_text":"que hora son?","pub_date":"2020-11-09T21:33:00Z"},
+                                    {"url":"http://127.0.0.1:8000/questions/2/","id":2,"question_text":"como te llamas?","pub_date":"2020-11-09T21:33:00Z"}
+                                ]
+                            }
+                        */
+                        var myObj = JSON.parse(this.responseText);
 
-<script>
+                        // count
+                        var counter = document.getElementById("count").innerHTML;
+                        document.getElementById("count").innerHTML = counter.concat(myObj.count);
 
-function myFunction() {
-  alert("Hello! I am an alert box!");
-}
-function httpGet(theUrl)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
-console.log(httpGet('http://127.0.0.1:8000/questions/'))
-document.getElementById("demo").innerHTML = httpGet('http://127.0.0.1:8000/questions/');
-
-</script>
+                        // results
+                        var i;
+                        for (i = 0; i < parseInt(myObj.count); i++) {
+                            var node = document.createElement("LI");                                // Create a <li> node
+                            var textnode = document.createTextNode(myObj.results[i].question_text); // Create a text node
+                            node.appendChild(textnode);                                             // Append the text to <li>
+                            document.getElementById("results").appendChild(node);                   // Append <li> to <ul> with id="results"
+                        }
+                    }
+                };
+                xhttp.open("GET", "http://127.0.0.1:8000/questions/", true);
+                xhttp.send();
+            }
+        </script>
 
     </body>
 </html>
