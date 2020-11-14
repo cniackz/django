@@ -5,10 +5,13 @@
 1. `http://127.0.0.1:8000/`
 1. `http://127.0.0.1:8000/quickstart/` 
    * Full Stack Testing
-   * PSQL <-> BE <-> FE
+   * PSQL <-> BE <-> API <-> FE
 1. `http://127.0.0.1:8000/questions/`
-   * BE Testing
+   * API Testing
    * PSQL <-> BE <-> REST Framework
+1. `http://127.0.0.1:8000/polls/`
+   * No API implementation
+   * PSQL <-> BE <-> FE
 
 # PSQL
 
