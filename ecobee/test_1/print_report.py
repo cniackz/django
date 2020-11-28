@@ -148,7 +148,7 @@ def display_report(test_result_dictionary):
         final_result.append(message)
         results = test_suite.get('results')
         result = print_results(results)
-        if result:
+        if result in [errors[error] for error in errors]:
             # broken file
             final_result = result
             break
