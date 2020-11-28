@@ -1,3 +1,5 @@
 .venv
 .DS_Store
 ecobee/test_1/test_1/
+ecobee/test_2/.virtual_env_test2/
+ecobee/test_2/chromedriver
