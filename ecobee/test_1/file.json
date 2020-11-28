@@ -3,6 +3,7 @@
         {
             "suite_name": "hvac_mode",
             "results": [
+                1,
                 {"test_name": "test_eco_2621","time": "8.556","status": "pass"},
                 {"test_name": "test_eco_1725","time": "45.909","status": "pass"},
                 {"test_name": " test_eco_2645","time": "9.383","status": "fail"},

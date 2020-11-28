@@ -110,9 +110,9 @@ def print_results(results):
     final_result = []
     result_names = ('pass', 'fail', 'blocked')
     test_details = get_number_of_tests(results, result_names)
-    if 'invalid test_results' in test_details:
+    if test_details in [errors[error] for error in errors]:
         # File is broken, dont proceed
-        final_result = 'invalid results'
+        final_result = test_details
     else:
         # All the detail lists need to be printed in ascending order
         # blocked, fail, pass, slow
@@ -148,9 +148,9 @@ def display_report(test_result_dictionary):
         final_result.append(message)
         results = test_suite.get('results')
         result = print_results(results)
-        if 'invalid results' in result:
+        if result:
             # broken file
-            final_result = 'invalid results in JSON file'
+            final_result = result
             break
 
     print('')
@@ -172,5 +172,7 @@ if __name__ == '__main__':
 
     if test_result_dictionary:
         result = display_report(test_result_dictionary)
-        if 'invalid result' in result:
-            print('JSON file has invalid results')
+        if result:
+            for error in errors:
+                if errors[error] == result:
+                    print(error)
