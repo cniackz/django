@@ -52,7 +52,7 @@ def get_number_of_tests(test_results,result_names):
         '''
         result = None
         for result_name in result_names:
-            # Proper treatment for common error conditions <-- found with unittest in broken JS file
+            # Proper treatment for common error conditions
             if isinstance(test_result, int):
                 result = errors['invalid_results']
             else:
@@ -118,7 +118,7 @@ def print_results(results):
         # blocked, fail, pass, slow
         for result in sorted(test_details):
             if isinstance(test_details[result], int):
-                # Print out the total number of test that took more than 10 seconds
+                # Print out the total number of test that took more than 10 secs
                 message = '\tSlow tests: {0}'.format(test_details[result])
                 message += ' (took more than 10 seconds)'
                 print(message)
