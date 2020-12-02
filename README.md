@@ -65,7 +65,7 @@ function httpGet(theUrl)
   * `http://127.0.0.1:8000/polls/2/results/`
 
 # Authentication credentials were not provided.
-If you see this message on http://127.0.0.1:8000/questions/ \n
-You need to login, if you open up the browser you'll see a 'Login' \n 
-link in the top right of the page. If you log in as admin/Yuyu@123, \n
+If you see this message on http://127.0.0.1:8000/questions/ \
+You need to login, if you open up the browser you'll see a 'Login' \
+link in the top right of the page. If you log in as admin/Yuyu@123, \
 you'll be able to to see the data.
