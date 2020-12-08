@@ -3,6 +3,7 @@ from print_report import get_number_of_tests
 from print_report import print_test_details
 from print_report import print_results
 from print_report import display_report
+from print_report import helper_funtion
 
 class TestStringMethods(unittest.TestCase):
 
@@ -12,6 +13,18 @@ class TestStringMethods(unittest.TestCase):
         'invalid_suite_name': 2,
         'invalid_results': 3,
     }
+
+    def test_helper_function(self):
+        test_input = [
+            {'test_name': 'test_eco_2624', 'time': '', 'status': 'blocked'},
+            {'test_name': 'test_eco_2641', 'time': '', 'status': 'blocked'}
+        ]
+        actual_result = helper_funtion(test_input)
+        expected_result = [
+            {'test_name': 'test_eco_2624', 'time': '', 'status': 'blocked'},
+            {'test_name': 'test_eco_2641', 'time': '', 'status': 'blocked'}
+        ]
+        self.assertEqual(actual_result, expected_result)
 
     def test_get_number_of_tests_on_corrupted_file(self):
         test_results = [ 1,2,3,

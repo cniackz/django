@@ -82,16 +82,35 @@ def get_number_of_tests(test_results,result_names):
     return test_details
 
 def helper_funtion(list_of_dicts):
-    final_list = []
-    final_list_of_dict = []
+    '''
+    To sort a list of dictionaries by a time key
+    '''
+
+    # Get all the times
+    list_of_times = []
     for dictionary in list_of_dicts:
-        final_list.append(dictionary['time'])
-    final_list.sort()
-    for dictionary in list_of_dicts:
-        for item in final_list:
-            if dictionary['time'] == item:
-                final_list_of_dict.append(dictionary)
-    return final_list_of_dict
+        try:
+            list_of_times.append(float(dictionary['time']))
+        except:
+            list_of_times.append(0)
+
+    # Sort the times
+    list_of_times.sort()
+
+    # Sort the dictonaries
+    local_list_of_dictionaries = []
+    for index, time in enumerate(list_of_times):
+        for dictionary in list_of_dicts:
+            if time == 0:
+                time = ''
+            else:
+                time = str(time)
+            if dictionary['time'] == time:
+                local_list_of_dictionaries.insert(index,dictionary)
+                list_of_dicts.remove(dictionary)
+                break
+
+    return local_list_of_dictionaries
 
 def print_test_details(test_details):
     '''
