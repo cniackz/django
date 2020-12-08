@@ -156,15 +156,10 @@ def display_report(test_result_dictionary):
     print('')
     return final_result # Mainly for testing
 
-# Running the script directly from command line
-if __name__ == '__main__':
-    '''
-    Read the file
-    If file content is available then call the script
-    '''
+def main(file):
     test_result_dictionary = {}
     try:
-        file = open('file.json','r')
+        file = open(file,'r')
         test_result_dictionary = json.load(file)
         file.close()
     except Exception as e:
@@ -176,3 +171,12 @@ if __name__ == '__main__':
             for error in errors:
                 if errors[error] == result:
                     print(error)
+
+# Running the script directly from command line
+if __name__ == '__main__':
+    '''
+    Read the file
+    If file content is available then call the script
+    '''
+    main('file.json')
+
