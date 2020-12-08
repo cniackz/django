@@ -81,6 +81,18 @@ def get_number_of_tests(test_results,result_names):
 
     return test_details
 
+def helper_funtion(list_of_dicts):
+    final_list = []
+    final_list_of_dict = []
+    for dictionary in list_of_dicts:
+        final_list.append(dictionary['time'])
+    final_list.sort()
+    for dictionary in list_of_dicts:
+        for item in final_list:
+            if dictionary['time'] == item:
+                final_list_of_dict.append(dictionary)
+    return final_list_of_dict
+
 def print_test_details(test_details):
     '''
     It prints the test details for a nice view in the screen
@@ -88,7 +100,19 @@ def print_test_details(test_details):
     # All the detail lists need to be printed in ascending order
     # Sort a list of dictionaries by a value of the dictionary
     result = []
-    test_details = sorted(test_details, key=lambda k: k['test_name'].strip())
+    import operator
+    #import pdb; pdb.set_trace();
+    #test_details = sorted(test_details, key=lambda k: k['test_name'].strip())
+    #test_details = sorted(test_details, key=lambda k: k['time'].strip())
+    #import pdb; pdb.set_trace();
+    #test_details = test_details.sort(key=operator.itemgetter('time'))
+    #test_details = sorted(test_details, key=lambda k: k['time'])
+    test_details = helper_funtion(test_details)
+
+    #import pdb; pdb.set_trace();
+    #for item in test_details:
+    #for dictionary in test_details
+
     for test_detail in test_details:
         # Test details are:
         status = test_detail.get('status')
